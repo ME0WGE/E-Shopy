@@ -70,7 +70,7 @@ export default function ProductCard({ title, quantity, price }) {
                   onClick={() => setLiked(!liked)}
                 />
               </div>
-              <div id="buy-btn">
+              <div className="buy-btn">
                 <h3>Buy</h3>
               </div>
             </div>
