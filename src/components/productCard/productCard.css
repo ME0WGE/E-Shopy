@@ -21,9 +21,20 @@
   display: inline;
 }
 
+.price {
+  display: flex;
+  text-align: center;
+
+  gap: 0.5rem;
+}
 .price > h3 {
+  margin: 0;
+
   color: palevioletred;
-  display: inline;
+
+  align-self: center;
+
+  font-size: 2rem;
 }
 
 .choices {
@@ -42,6 +53,7 @@
 
   border: 2px solid white;
   border-radius: 50%;
+  background-color: white;
 }
 
 .btn-row {

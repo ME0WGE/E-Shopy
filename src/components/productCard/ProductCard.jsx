@@ -26,8 +26,8 @@ export default function ProductCard({ title, quantity, price }) {
               </h4>
             </div>
             <div className="price">
-              <h4 className="h4-title">Price:</h4>
-              <h3>€{price}</h3>
+              <h4 className="h4-title">Price: </h4>
+              <h3> €{price}</h3>
             </div>
             <div className="size-choices">
               <h4 className="h4-title">Sizes</h4>
