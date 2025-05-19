@@ -1,0 +1,50 @@
+.card-container {
+  color: hsl(178, 100%, 50%);
+}
+.card {
+  display: flex;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1-title {
+  font-size: 2rem;
+}
+
+.quantity-span {
+  color: palevioletred;
+}
+.quantity > h4 {
+  display: inline;
+}
+
+.price > h3 {
+  color: palevioletred;
+  display: inline;
+}
+
+.choices {
+  display: flex;
+  gap: 1rem;
+
+  color: palevioletred;
+}
+.choices > div {
+  cursor: pointer;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10rem;
+}
