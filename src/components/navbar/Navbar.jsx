@@ -9,7 +9,6 @@ export default function Navbar() {
         <h1 className="navbar-title">
           <span className="span-love">Love</span>Shop
         </h1>
-        <h2>Your Wallet: €500</h2>
         <FontAwesomeIcon icon={faCartShopping} className="navbar-cart" />
       </nav>
     </>

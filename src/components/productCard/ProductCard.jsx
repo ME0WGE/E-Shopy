@@ -1,32 +1,30 @@
 import "./productCard.css";
 import Heart from "../heart/Heart";
-// import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-
-const sizeMap = {
-  xs: 16,
-  s: 24,
-  m: 32,
-  l: 64,
-  xl: 86,
-  xxl: 128,
-};
-
-const colorMap = {
-  blue: "#2196f3",
-  black: "#222",
-  orange: "#ff9800",
-  grey: "#888",
-  green: "#4caf50",
-  yellow: "#ffeb3b",
-  red: "#f44336",
-  purple: "#9c27b0",
-};
 
 export default function ProductCard({ title, quantity, price }) {
   const [selectedSize, setSelectedSize] = useState("m");
   const [selectedColor, setSelectedColor] = useState("blue");
+
+  const sizeMap = {
+    xs: 16,
+    s: 24,
+    m: 32,
+    l: 64,
+    xl: 86,
+    xxl: 128,
+  };
+
+  const colorMap = {
+    blue: "#2196f3",
+    black: "#222",
+    orange: "#ff9800",
+    grey: "#888",
+    green: "#4caf50",
+    yellow: "#ffeb3b",
+    red: "#f44336",
+    purple: "#9c27b0",
+  };
 
   return (
     <>
