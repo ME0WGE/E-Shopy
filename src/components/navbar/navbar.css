@@ -2,31 +2,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: hsl(216, 50%, 16%);
-  color: hsl(0, 0%, 100%);
 
   width: 100%;
+
+  padding: 1rem 2rem;
+
+  background-color: hsl(216, 50%, 16%);
+  color: hsl(0, 0%, 100%);
 }
 
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
+
   color: hsl(178, 100%, 50%);
 }
 
 .span-love {
   font-size: 1.5rem;
+
   -webkit-text-stroke-width: 0.025rem;
   color: #c09bc2;
 }
 
 .navbar-cart {
   font-size: 1.4rem;
+
   color: hsl(0, 0%, 100%);
-  /* 
-  color: hsl(178, 100%, 50%);
-  
-  */
+  /* color: hsl(178, 100%, 50%);*/
+
   cursor: pointer;
 }
