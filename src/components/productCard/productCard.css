@@ -2,27 +2,44 @@
   color: hsl(178, 100%, 50%);
 
   margin-bottom: 2rem;
+
+  height: 50vh;
+  width: 50vw;
+
+  margin-top: 10rem;
 }
 .card {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 300px;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .h1-title {
   font-size: 2rem;
 }
 
-.quantity-span {
+.quantity {
+  display: flex;
+  text-align: center;
+
+  gap: 0.5rem;
+}
+.quantity > h3 {
+  margin: 0;
+
   color: palevioletred;
 
+  align-self: center;
+
   font-size: 2rem;
-}
-.quantity > h4 {
-  display: inline;
 }
 
 .price {
@@ -48,16 +65,48 @@
   color: palevioletred;
 }
 .choices > div {
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  width: 2.5rem;
+  height: 2.5rem;
 
   border: 2px solid white;
   border-radius: 50%;
+
   background-color: white;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.product-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #13233b;
+  border-radius: 10px;
+
+  width: 50%;
+  height: 100%;
+
+  margin-right: 5rem;
+}
+
+.product-display svg {
+  height: 50%;
+  width: auto;
+  
+  max-width: 100%;
+  display: block;
 }
 
 .btn-row {
@@ -74,8 +123,19 @@
   width: 120px;
   height: 50px;
 
+  margin-top: 1.5rem;
+
   cursor: pointer;
+
+  transition: all 250ms;
 }
 .buy-btn > h3 {
   font-size: 1.5rem;
+}
+.buy-btn:hover {
+  background-color: #db7093;
+  color: #0f1424;
+  border: 2px solid white;
+
+  transform: scale(1.05);
 }

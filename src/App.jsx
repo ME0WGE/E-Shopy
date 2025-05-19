@@ -9,7 +9,9 @@ function App() {
       {/* Navbar */}
       <Navbar />
       {/* Products */}
-      <Product />
+      <div className="product-container">
+        <Product />
+      </div>
       {/* Footer */}
       <Footer />
     </>

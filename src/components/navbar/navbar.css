@@ -9,6 +9,12 @@
 
   background-color: hsl(216, 50%, 16%);
   color: hsl(0, 0%, 100%);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  opacity: 90%;
 }
 
 .navbar-title {

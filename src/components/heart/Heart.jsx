@@ -2,7 +2,7 @@ import "./heart.css";
 
 export default function Heart({
   size = 24,
-  color = "red",
+  color = "blue",
   className = "",
   onClick,
 }) {

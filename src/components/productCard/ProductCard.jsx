@@ -1,29 +1,48 @@
 import "./productCard.css";
 import Heart from "../heart/Heart";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+// import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
+const sizeMap = {
+  xs: 16,
+  s: 24,
+  m: 32,
+  l: 64,
+  xl: 86,
+  xxl: 128,
+};
+
+const colorMap = {
+  blue: "#2196f3",
+  black: "#222",
+  orange: "#ff9800",
+  grey: "#888",
+  green: "#4caf50",
+  yellow: "#ffeb3b",
+  red: "#f44336",
+  purple: "#9c27b0",
+};
+
 export default function ProductCard({ title, quantity, price }) {
-  const [liked, setLiked] = useState(false);
+  const [selectedSize, setSelectedSize] = useState("m");
+  const [selectedColor, setSelectedColor] = useState("blue");
 
   return (
     <>
       <div className="card-container">
         <div className="card">
           <div className="product-display">
-            {/* <Heart
-              size={liked ? 40 : 24}
-              color={liked ? "hsl(178, 100%, 50%)" : "gray"}
-              onClick={() => setLiked(!liked)}
-            /> */}
+            <Heart
+              size={sizeMap[selectedSize]}
+              color={colorMap[selectedColor]}
+            />
           </div>
           <div className="card-content">
             <h1 className="h1-title">{title}</h1>
             <div className="quantity">
-              <h4 className="h4-title">
-                Quantity: <span className="quantity-span">{quantity}</span>
-              </h4>
+              <h4 className="h4-title">Quantity:</h4>
+              <h3> {quantity}</h3>
             </div>
             <div className="price">
               <h4 className="h4-title">Price: </h4>
@@ -32,44 +51,50 @@ export default function ProductCard({ title, quantity, price }) {
             <div className="size-choices">
               <h4 className="h4-title">Sizes</h4>
               <div className="choices">
-                <div className="xs">xs</div>
-                <div className="s">s</div>
-                <div className="m">m</div>
-                <div className="l">l</div>
-                <div className="xl">xl</div>
-                <div className="xxl">xxl</div>
+                {["xs", "s", "m", "l", "xl", "xxl"].map((size) => (
+                  <div
+                    key={size}
+                    className={
+                      size + (selectedSize === size ? " selected" : "")
+                    }
+                    onClick={() => setSelectedSize(size)}
+                    style={{
+                      cursor: "pointer",
+                      fontWeight: selectedSize === size ? "bold" : "normal",
+                    }}
+                  >
+                    {size}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="color-choices">
               <h4 className="h4-title">Colors</h4>
               <div className="choices">
-                <div className="blue-black">
-                  <div className="blue" />
-                  <div className="black" />
-                </div>
-                <div className="orange-grey">
-                  <div className="orange" />
-                  <div className="grey" />
-                </div>
-                <div className="green-yellow">
-                  <div className="green" />
-                  <div className="yellow" />
-                </div>
-                <div className="red-black">
-                  <div className="red" />
-                  <div className="black" />
-                </div>
+                {[
+                  "blue",
+                  "purple",
+                  "orange",
+                  "grey",
+                  "green",
+                  "yellow",
+                  "red",
+                ].map((color) => (
+                  <div
+                    key={color}
+                    className={color}
+                    style={{
+                      backgroundColor: colorMap[color] || color,
+                      border: selectedColor === color ? "2px solid #000" : "",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setSelectedColor(color)}
+                  />
+                ))}
               </div>
             </div>
             <div className="btn-row">
-              <div id="shopping-cart-btn">
-                {/* <FontAwesomeIcon icon={faHeart} /> */}
-                <Heart
-                  size={liked ? 40 : 24}
-                  color={liked ? "hsl(178, 100%, 50%)" : "gray"}
-                  onClick={() => setLiked(!liked)}
-                />
-              </div>
+              <div id="shopping-cart-btn"></div>
               <div className="buy-btn">
                 <h3>Buy</h3>
               </div>

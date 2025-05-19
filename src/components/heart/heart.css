@@ -1,8 +1,8 @@
 .heart {
   position: relative;
   transform: rotate(-45deg);
+  /* Looks cool without transform too */
   transition: all 0.3s ease;
-  cursor: pointer;
 
   margin-top: 1rem;
 }
