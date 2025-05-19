@@ -12,9 +12,6 @@ dist
 dist-ssr
 *.local
 
-src/assets/inspiration.css
-src/assets/inspiration.html
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
