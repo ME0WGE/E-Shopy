@@ -1,7 +1,6 @@
 import "./productCard.css";
 import Heart from "../heart/Heart";
 import { useState } from "react";
-import Panier from "../panier/Panier";
 
 export default function ProductCard({
   title,
@@ -9,6 +8,7 @@ export default function ProductCard({
   price,
   money,
   setMoney,
+  addToCart,
 }) {
   const [selectedSize, setSelectedSize] = useState("m");
   const [selectedColor, setSelectedColor] = useState("blue");
@@ -33,9 +33,15 @@ export default function ProductCard({
     purple: "#9c27b0",
   };
 
-  const handleMoney = () => {
-    {
+  const handleBuy = () => {
+    if (money >= price && quantity > 0) {
       setMoney(money - price);
+      addToCart({
+        title,
+        price,
+        size: selectedSize,
+        color: selectedColor,
+      });
     }
   };
 
@@ -108,8 +114,8 @@ export default function ProductCard({
               <div id="shopping-cart-btn"></div>
               <button
                 className="buy-btn"
-                onClick={handleMoney}
-                disabled={money < price ? true : false}
+                onClick={handleBuy}
+                disabled={money < price || quantity === 0}
               >
                 <h3>Buy</h3>
               </button>
