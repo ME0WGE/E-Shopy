@@ -111,7 +111,7 @@ export default function ProductCard({
               </div>
             </div>
             <div className="btn-row">
-              <div id="shopping-cart-btn"></div>
+              {/* <div id="shopping-cart-btn"></div> */}
               <button
                 className="buy-btn"
                 onClick={handleBuy}
