@@ -2,73 +2,105 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 100%;
-
   padding: 1rem 2rem;
-
-  background-color: hsl(216, 50%, 16%);
-  color: hsl(0, 0%, 100%);
-
+  background-color: hsla(216, 50%, 16%, 0.85);
+  color: #fff;
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  opacity: 90%;
+  border-bottom: 2.5px solid #c09bc2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(192, 155, 194, 0.1),
+    0 1.5px 8px 0 rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: box-shadow 0.3s, background-color 0.3s;
 }
 
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
-
   color: hsl(178, 100%, 50%);
+  letter-spacing: 1px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.13);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.navbar-title:hover {
+  color: #fff;
 }
 
 .span-love {
   font-size: 1.5rem;
-
   -webkit-text-stroke-width: 0.025rem;
   color: #c09bc2;
+  text-shadow: 0 1px 8px rgba(192, 155, 194, 0.18);
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .navbar-cart {
   font-size: 1.4rem;
-
-  color: hsl(0, 0%, 100%);
-  /* color: hsl(178, 100%, 50%);*/
-
+  color: #fff;
   cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
+  filter: drop-shadow(0 1px 4px #c09bc2aa);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.navbar-cart:hover {
+  color: hsl(178, 100%, 50%);
+  transform: scale(1.1);
 }
 
 .wallet {
   font-size: 1.5rem;
-
   display: flex;
-  justify-items: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.13);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 .wallet > span {
-  font-size: 1.5rem;
-
   color: hsl(178, 100%, 50%);
-
+  font-weight: bold;
   margin-left: 0.25rem;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  margin-top: 0.15rem;
+  font-size: 1.25rem;
 }
 
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: row;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
   }
   .navbar-title,
   .wallet {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+  }
+  .wallet > span {
+    font-size: 1.5rem;
+    margin-top: 0rem;
   }
 }
 
 @media (max-width: 575px) {
   .navbar {
-    flex-direction: row;
     padding: 0.2rem 1rem;
     gap: 0.2rem;
   }
@@ -76,11 +108,17 @@
   .wallet {
     font-size: 1rem;
   }
+  .navbar-title {
+    font-size: 1.25rem;
+  }
+  .navbar-title > span {
+    font-size: 1.25rem;
+  }
   .wallet > span {
     font-size: 1rem;
+    margin-top: 0rem;
   }
   .wallet {
-    display: flex;
     flex-direction: row;
   }
 }

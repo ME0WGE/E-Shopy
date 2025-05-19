@@ -1,10 +1,11 @@
 .heart {
   position: relative;
   transform: rotate(-45deg);
-  /* Looks cool without transform too */
-  transition: all 0.3s ease;
-
+  transition: filter 0.3s, transform 0.3s;
   margin-top: 1rem;
+  filter: drop-shadow(0 2px 6px rgba(192, 155, 194, 0.15));
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .heart::before,
