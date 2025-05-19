@@ -6,9 +6,11 @@ import Product from "./components/product/Product";
 function App() {
   return (
     <>
-      {/* Ready to code! */}
-      {/* Script written by github.com/ME0WGE */}
-      <Footer/>
+      {/* Navbar */}
+      <Navbar />
+      {/* Products */}
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

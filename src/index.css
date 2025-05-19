@@ -16,11 +16,11 @@
   /* Typography */
   font-family: "Rubik";
   font-size: 18px;
-
 }
 
 #root {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -35,10 +35,6 @@ html {
 
   width: 100%;
   min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   /* Body background color: Very dark blue */
   background-color: hsl(226, 43%, 10%);
