@@ -2,16 +2,16 @@
   {
     "title": "Heartge",
     "Quantity": 5,
-    "Price": "420"
+    "Price": 420
   },
   {
     "title": "Egtraeh",
     "Quantity": 13,
-    "Price": "38.99"
+    "Price": 38.99
   },
   {
     "title": "Drotuct",
     "Quantity": 2,
-    "Price": "4.99"
+    "Price": 4.99
   }
 ]

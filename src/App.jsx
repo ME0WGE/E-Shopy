@@ -1,21 +1,22 @@
+import { useState } from "react";
 import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Panier from "./components/panier/Panier";
 import Product from "./components/product/Product";
-import Wallet from "./components/wallet/Wallet";
 
 function App() {
+  const [money, setMoney] = useState(500);
+
   return (
     <>
       {/* Navbar */}
-      <Navbar />
+      <Navbar currentMoney={money} />
       {/* Products */}
       <div className="product-container">
-        <Product />
+        <Product money={money} setMoney={setMoney} />
       </div>
-      <Wallet />
-      <Panier/>
+      {/* <Panier/> */}
       {/* Footer */}
       <Footer />
     </>

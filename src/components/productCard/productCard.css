@@ -104,7 +104,7 @@
 .product-display svg {
   height: 50%;
   width: auto;
-  
+
   max-width: 100%;
   display: block;
 }
@@ -138,4 +138,19 @@
   border: 2px solid white;
 
   transform: scale(1.05);
+}
+.buy-btn:disabled {
+  background-color: grey;
+
+  transform: scale(1);
+  color: #0f14246a;
+
+  cursor: auto;
+}
+.buy-btn:disabled:hover {
+  background-color: grey;
+  color: #0f14246a;
+  transform: scale(1);
+
+  cursor: auto;
 }

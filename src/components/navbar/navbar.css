@@ -39,3 +39,17 @@
 
   cursor: pointer;
 }
+
+.wallet {
+  font-size: 1.5rem;
+
+  display: flex;
+  justify-items: center;
+}
+.wallet > span {
+  font-size: 1.5rem;
+
+  color: hsl(178, 100%, 50%);
+
+  margin-left: 0.25rem;
+}
