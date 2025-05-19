@@ -18,3 +18,27 @@
 
   gap: 1rem;
 }
+
+@media (max-width: 900px) {
+  .panier-container {
+    margin-left: 0;
+    width: 100vw;
+  }
+  .panier-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .panier-container {
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .panier-item {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}

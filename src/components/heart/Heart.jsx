@@ -1,7 +1,7 @@
 import "./heart.css";
 
 export default function Heart({
-  size = 24,
+  size = 64,
   color = "blue",
   className = "",
   onClick,

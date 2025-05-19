@@ -10,7 +10,7 @@ export default function ProductCard({
   setMoney,
   addToCart,
 }) {
-  const [selectedSize, setSelectedSize] = useState("m");
+  const [selectedSize, setSelectedSize] = useState("xl");
   const [selectedColor, setSelectedColor] = useState("blue");
 
   const sizeMap = {
