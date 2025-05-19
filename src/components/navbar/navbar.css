@@ -56,7 +56,7 @@
 
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     padding: 0.5rem 1rem;
     gap: 0.5rem;
   }
@@ -66,14 +66,21 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   .navbar {
-    flex-direction: column;
-    padding: 0.2rem 0.5rem;
+    flex-direction: row;
+    padding: 0.2rem 1rem;
     gap: 0.2rem;
   }
   .navbar-title,
   .wallet {
     font-size: 1rem;
+  }
+  .wallet > span {
+    font-size: 1rem;
+  }
+  .wallet {
+    display: flex;
+    flex-direction: row;
   }
 }

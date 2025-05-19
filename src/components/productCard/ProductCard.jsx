@@ -65,49 +65,51 @@ export default function ProductCard({
               <h4 className="h4-title">Price: </h4>
               <h3> €{price}</h3>
             </div>
-            <div className="size-choices">
-              <h4 className="h4-title">Sizes</h4>
-              <div className="choices">
-                {["xs", "s", "m", "l", "xl", "xxl"].map((size) => (
-                  <div
-                    key={size}
-                    className={
-                      size + (selectedSize === size ? " selected" : "")
-                    }
-                    onClick={() => setSelectedSize(size)}
-                    style={{
-                      cursor: "pointer",
-                      fontWeight: selectedSize === size ? "bold" : "normal",
-                    }}
-                  >
-                    {size}
-                  </div>
-                ))}
+            <div className="mb-choices">
+              <div className="size-choices">
+                <h4 className="h4-title">Sizes</h4>
+                <div className="choices">
+                  {["xs", "s", "m", "l", "xl", "xxl"].map((size) => (
+                    <div
+                      key={size}
+                      className={
+                        size + (selectedSize === size ? " selected" : "")
+                      }
+                      onClick={() => setSelectedSize(size)}
+                      style={{
+                        cursor: "pointer",
+                        fontWeight: selectedSize === size ? "bold" : "normal",
+                      }}
+                    >
+                      {size}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="color-choices">
-              <h4 className="h4-title">Colors</h4>
-              <div className="choices">
-                {[
-                  "blue",
-                  "purple",
-                  "orange",
-                  "grey",
-                  "green",
-                  "yellow",
-                  "red",
-                ].map((color) => (
-                  <div
-                    key={color}
-                    className={color}
-                    style={{
-                      backgroundColor: colorMap[color] || color,
-                      border: selectedColor === color ? "2px solid #000" : "",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => setSelectedColor(color)}
-                  />
-                ))}
+              <div className="color-choices">
+                <h4 className="h4-title">Colors</h4>
+                <div className="choices">
+                  {[
+                    "blue",
+                    "purple",
+                    "orange",
+                    "grey",
+                    "green",
+                    "yellow",
+                    "red",
+                  ].map((color) => (
+                    <div
+                      key={color}
+                      className={color}
+                      style={{
+                        backgroundColor: colorMap[color] || color,
+                        border: selectedColor === color ? "2px solid #000" : "",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => setSelectedColor(color)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
             <div className="btn-row">
