@@ -20,7 +20,7 @@ LoveShop is a modern e-commerce application built with React. This project offer
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Coming Soon...
 
 - **Functional shopping cart in the navbar:**  
   Easily add and view selected items at any time via a persistent cart accessible from the navigation bar.
